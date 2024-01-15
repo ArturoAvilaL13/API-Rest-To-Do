@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/general.css" />
+  </head>
+  <body>
+    <h1>To Do Exercice</h1>
+    <div id="tasks"></div>
+    <div class="separador"></div>
+    <div id="postTask">
+      <h3>Agregar tarea nueva</h3>
+      <label for="titulo">titulo</label>
+      <input type="text" id="titulo" />
+
+      <label for="descripcion">descripcion</label>
+      <textarea name="" id="descripcion" cols="30" rows="10"></textarea>
+      <button id="agregarTarea">agregar</button>
+    </div>
+    <div class="separador"></div>
+    <div id="deleteTask">
+      <h3>Eliminar una tarea</h3>
+      <select name="" id="idtareas">
+        <option value="0">selecciona una tarea</option>
+      </select>
+      <button id="botonEliminar">Eliminar tarea</button>
+    </div>
+    <div class="separador"></div>
+    <div id="putTask">
+      <h3>Modificar tarea</h3>
+      <select name="" id="putTareas">
+        <option value="0">selecciona una tarea</option>
+      </select>
+      <label for="titulo">titulo</label>
+      <input type="text" id="tituloPut" />
+      <label for="descripcion">descripcion</label>
+      <textarea name="" id="descripcionPut" cols="30" rows="10"></textarea>
+      <button id="putButton">modificar</button>
+    </div>
+    <!--Con este script importamos axios para poderlo utilizar en los .js que use esta pagina-->
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./javascripts/getTasks.js"></script>
+    <script type="module" src="./javascripts/postTasks.js"></script>
+    <script type="module" src="./javascripts/deleteTask.js"></script>
+    <script type="module" src="./javascripts/putTask.js"></script>
+  </body>
+</html>
